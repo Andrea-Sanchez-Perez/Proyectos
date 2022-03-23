@@ -1,0 +1,36 @@
+package farmacia;
+import java.util.*;
+public class Farmacia {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        double pago,descuento,incremento;
+        int op;
+        System.out.println("Ingrese su total de pago actual");
+        pago=sc.nextDouble();
+        System.out.println("\n Selecione el tipo de pago a afectuar"
+                +"\n1.-Al contado\n 2.-Con tarjeta\n 3.-Salir");
+        op=sc.nextInt();
+        switch (op){
+            case 1:
+                descuento=(pago*0.05);
+                System.out.println("\n Su descuento es:\t"+descuento+
+                        "\n Total con descuento es:\t"+(pago-descuento));
+                break;
+            case 2:
+                incremento=(pago*0.03);
+                System.out.println("\n Su cargo es:\t"+incremento+
+                        "\n Total con cargo por tarjeta es:\t"+(pago+incremento));
+                break;
+            case 3:
+                System.out.println("Gracias por su compra");
+                System.exit(0);
+                
+            default:
+                System.out.println("Invalido");
+                break;
+        }
+        
+    }
+    
+}
